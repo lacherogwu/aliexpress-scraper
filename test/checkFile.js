@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 
-const file = await fs.readFile('all-products.json', 'utf-8');
+const file = await fs.readFile('test/all-products.json', 'utf-8');
 /** @type {Array} */
 const json = JSON.parse(file);
 
@@ -30,5 +30,5 @@ console.log(filtered.length);
 // });
 // console.log(priceMap);
 
-const fileName = 'products/garden-supplies.json';
+const fileName = 'test/products/computer-office.json';
 await fs.writeFile(fileName, JSON.stringify(filtered));
