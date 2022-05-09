@@ -1,5 +1,3 @@
-import { terser } from 'rollup-plugin-terser';
-
 export default {
 	input: 'src/main.js',
 	output: [
@@ -13,5 +11,4 @@ export default {
 		},
 	],
 	external: ['axios'],
-	plugins: [terser()],
 };
