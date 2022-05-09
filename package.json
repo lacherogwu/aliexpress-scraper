@@ -1,6 +1,6 @@
 {
 	"name": "aliexpress-scraper",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Aliexpress product scraper",
 	"type": "module",
 	"main": "lib/main.mjs",
