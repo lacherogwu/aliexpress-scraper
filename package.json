@@ -22,6 +22,10 @@
 	],
 	"author": "LacheRo",
 	"license": "MIT",
+	"repository": "lacherogwu/aliexpress-scraper",
+	"bugs": {
+		"url": "https://github.com/lacherogwu/aliexpress-scraper/issues"
+	},
 	"dependencies": {
 		"axios": "^0.26.1"
 	},

@@ -1,4 +1,4 @@
-import { parseFile, randomNumber } from './src/utils.js';
+import { parseFile, randomNumber } from '../src/utils.js';
 import { writeFile } from 'fs/promises';
 
 const fileName = 'products/kitchen-dining-bar.json';
