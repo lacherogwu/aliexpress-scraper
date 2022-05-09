@@ -1,5 +1,7 @@
 # Aliexpress Scraper
 
+Scrapping products from Aliexpress
+
 ## Methods
 
 - Find items by category

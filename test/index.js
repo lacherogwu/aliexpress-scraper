@@ -24,7 +24,7 @@ const getAllProducts = async () => {
 	for (let i = 1; i < 5000; i++) {
 		try {
 			const items = await getItemsByCategory({
-				category: 'kitchen-dining-bar',
+				category: 'computer-office',
 				page: i,
 				minPrice: 1,
 				maxPrice: 2000,

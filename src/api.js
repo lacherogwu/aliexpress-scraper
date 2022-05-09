@@ -26,7 +26,7 @@ instance.interceptors.response.use(({ data }) => getItems(data));
 
 /**
  * @param {Object} options
- * @param {('kitchen-dining-bar'|'garden-supplies')} options.category
+ * @param {('kitchen-dining-bar'|'garden-supplies'|'other-kitchen-tools-gadgets'|'consumer-electronics'|'computer-office'|'sports-entertainment')} options.category
  * @param {number} options.page
  * @param {number} options.minPrice
  * @param {number} options.maxPrice
@@ -71,4 +71,8 @@ export const getItemsBySearchTerm = (term, page = 1) => {
 const CATEGORIES = new Map([
 	['kitchen-dining-bar', 200002086],
 	['garden-supplies', 125],
+	['other-kitchen-tools-gadgets', 100004817],
+	['consumer-electronics', 44],
+	['computer-office', 7],
+	['sports-entertainment', 18],
 ]);
