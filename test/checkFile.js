@@ -30,5 +30,5 @@ console.log(filtered.length);
 // });
 // console.log(priceMap);
 
-const fileName = 'test/products/computer-office.json';
+const fileName = 'test/products/gadgets.json';
 await fs.writeFile(fileName, JSON.stringify(filtered));

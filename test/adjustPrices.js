@@ -12,7 +12,7 @@ export const parseFile = async fileName => {
 
 export const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
-const fileName = 'test/products/computer-office.json';
+const fileName = 'test/products/gadgets.json';
 const json = await parseFile(fileName);
 
 console.log(json.filter(item => item.price < 1).length);

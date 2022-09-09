@@ -3,3 +3,4 @@ lib/
 test/backups
 test/products
 test/all-products.json
+.DS_Store

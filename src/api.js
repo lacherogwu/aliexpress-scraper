@@ -52,17 +52,28 @@ export const getItemsByCategory = options => {
 	return instance.get(url, { params });
 };
 
-export const getItemsBySearchTerm = (term, page = 1) => {
-	term = term.replace(/\s/g, '+');
+/**
+ *
+ * @param {Object} options
+ * @param {string} options.search Search term
+ * @param {number} options.page
+ * @param {number} options.minPrice
+ * @param {number} options.maxPrice
+ * @returns {Promise<Array>}
+ */
+export const getItemsBySearchTerm = options => {
+	const { search = '', page = 1, minPrice = 0, maxPrice = 999999 } = options;
 
 	const params = {
 		trafficChannel: 'main',
 		d: 'y',
 		CatId: 0,
-		SearchText: term,
+		SearchText: search.replace(/\s/g, '+'),
 		ltype: 'wholesale',
 		SortType: 'default',
 		page,
+		minPrice,
+		maxPrice,
 	};
 
 	return instance.get('/wholesale', { params });

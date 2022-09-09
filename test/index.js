@@ -1,5 +1,5 @@
 import fs from 'fs/promises';
-import { getItemsByCategory } from '../src/api.js';
+import { getItemsByCategory, getItemsBySearchTerm } from '../src/api.js';
 
 const parseObject = object => {
 	const { productId, prices } = object;
@@ -21,18 +21,19 @@ const parseObject = object => {
 
 const memoryProducts = [];
 const getAllProducts = async () => {
-	for (let i = 1; i < 5000; i++) {
+	const totalIterations = 61;
+	for (let i = 1; i < totalIterations; i++) {
 		try {
-			const items = await getItemsByCategory({
-				category: 'computer-office',
-				page: i,
+			const items = await getItemsBySearchTerm({
 				minPrice: 1,
 				maxPrice: 2000,
+				page: i,
+				search: 'gadgets',
 			});
 			const parsedItems = items.map(parseObject);
 			memoryProducts.push(...parsedItems);
 
-			console.log(`[UPDATE] page: ${i}, items: ${memoryProducts.length}`);
+			console.log(`[UPDATE] page: ${i}/${totalIterations}, items: ${memoryProducts.length}`);
 			await fs.writeFile('test/all-products.json', JSON.stringify(memoryProducts));
 		} catch (err) {
 			console.log(err);
